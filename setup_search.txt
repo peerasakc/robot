@@ -1,0 +1,28 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Variables ***
+${url}        http://google.co.th
+${browser}    firefox
+${delay}      0.1
+
+*** Keywords ***
+Open Browser To Search
+    Open Browser    ${url}    ${browser}
+    Maximize Browser Window
+    Set Selenium Speed    ${delay}
+    Check Title Should Be Correct
+
+Check Title Should Be Correct
+    Title Should Be    Google
+
+Input Search
+    [Arguments]      ${Keyword Search} 
+    Input Text       gbqfq         ${Keyword Search}
+
+Submit Button
+    Click Button     gbqfba
+
+Result From Search
+    Page Should Contain    locator    dresses
+    

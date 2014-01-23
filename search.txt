@@ -1,0 +1,16 @@
+*** Settings ***
+Suite Setup       Open Browser To Search
+Suite Teardown    Close Browser
+Test Template     Check Search
+Resource          setup_search.txt
+
+*** Test Cases ***    Keyword Search    
+Valid Keyword         dress
+
+**** Keywords ***
+Check Search
+    [Arguments]     ${Keyword Search}
+    Input Search    ${Keyword Search}
+    Submit Button
+    Result From Search
+

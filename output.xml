@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140123 12:56:16.418" generator="Robot 2.8.3 (Python 2.7.4 on linux2)">
+<suite source="/home/kann/git/robot/search.txt" id="s1" name="Search">
+<kw type="setup" name="setup_search.Open Browser To Search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20140123 12:56:16.545" level="INFO">Opening browser 'firefox' to base url 'http://google.co.th'</msg>
+<status status="PASS" endtime="20140123 12:56:29.857" starttime="20140123 12:56:16.544"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140123 12:56:30.076" starttime="20140123 12:56:29.857"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20140123 12:56:30.077" starttime="20140123 12:56:30.077"></status>
+</kw>
+<kw type="kw" name="setup_search.Check Title Should Be Correct">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20140123 12:56:30.188" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20140123 12:56:30.188" starttime="20140123 12:56:30.078"></status>
+</kw>
+<status status="PASS" endtime="20140123 12:56:30.189" starttime="20140123 12:56:30.077"></status>
+</kw>
+<status status="PASS" endtime="20140123 12:56:30.189" starttime="20140123 12:56:16.544"></status>
+</kw>
+<test id="s1-t1" name="Valid Keyword">
+<kw type="kw" name="Check Search">
+<doc></doc>
+<arguments>
+<arg>dress white</arg>
+</arguments>
+<kw type="kw" name="setup_search.Input Search">
+<doc></doc>
+<arguments>
+<arg>${Keyword Search}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>gbqfq</arg>
+<arg>${Keyword Search}</arg>
+</arguments>
+<msg timestamp="20140123 12:56:30.193" level="INFO">Typing text 'dress white' into text field 'gbqfq'</msg>
+<status status="PASS" endtime="20140123 12:56:31.153" starttime="20140123 12:56:30.192"></status>
+</kw>
+<status status="PASS" endtime="20140123 12:56:31.153" starttime="20140123 12:56:30.191"></status>
+</kw>
+<kw type="kw" name="setup_search.Submit Button">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=gbqfb</arg>
+</arguments>
+<msg timestamp="20140123 12:56:31.154" level="INFO">Clicking button 'id=gbqfb'.</msg>
+<status status="PASS" endtime="20140123 12:56:33.983" starttime="20140123 12:56:31.154"></status>
+</kw>
+<status status="PASS" endtime="20140123 12:56:33.984" starttime="20140123 12:56:31.153"></status>
+</kw>
+<kw type="kw" name="setup_search.Result From Search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>White Dresses</arg>
+</arguments>
+<msg timestamp="20140123 12:56:34.945" level="INFO">Current page contains text 'White Dresses'.</msg>
+<status status="PASS" endtime="20140123 12:56:34.946" starttime="20140123 12:56:33.985"></status>
+</kw>
+<status status="PASS" endtime="20140123 12:56:34.946" starttime="20140123 12:56:33.984"></status>
+</kw>
+<status status="PASS" endtime="20140123 12:56:34.946" starttime="20140123 12:56:30.191"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20140123 12:56:34.947" critical="yes" starttime="20140123 12:56:30.189"></status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140123 12:56:35.108" starttime="20140123 12:56:34.948"></status>
+</kw>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20140123 12:56:35.116" starttime="20140123 12:56:16.418"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Search">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
